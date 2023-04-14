@@ -1,0 +1,6 @@
+b = int(input('Digite a base e a altura do triangulo '))
+a = int(input())
+area = (b * a) / 2
+perimetro = b + (2 * a)
+diagonal = (b * 2 + a * 2) ** 0.5
+print(f'Area = {area:.2f} - Perimetro = {perimetro:.2f} - Diagonal = {diagonal:.2f}')
