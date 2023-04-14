@@ -1,0 +1,4 @@
+nota1 = int(input('Digite a nota do primeiro bimestre: '))
+nota2 = int(input('Digite a nota do segundo bimestre: '))
+media = (nota1 + nota2) / 2
+print(f'Media parcial = {media}')
