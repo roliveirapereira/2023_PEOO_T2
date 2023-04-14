@@ -1,0 +1,6 @@
+nota_1 = int(input())
+nota_2 = int(input())
+
+PROD = ((nota_1) * (nota_2 ))
+
+print(f'PROD = {PROD}')
