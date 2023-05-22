@@ -1,0 +1,14 @@
+'''A classe deve ter um atributo raio para armazenar a dimensão da figura e métodos para calcular sua área e sua
+circunferência.
+Escrever um programa para testar a classe.'''
+
+import math
+class Circulo:
+    def __init__(self):
+        self.r = 0
+    def calc_area(self):
+        return math.pi * (self.r ** 2)
+circulo = Circulo()
+circulo.r = 2
+print(circulo.calc_area())
+  
