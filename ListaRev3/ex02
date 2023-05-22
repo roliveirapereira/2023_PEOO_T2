@@ -1,0 +1,5 @@
+def area_do_circulo(r):
+    area = 3.14 * (r * r)
+    return area
+r = int(input())
+print(f'Area = {area_do_circulo(r)}')
