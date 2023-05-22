@@ -1,0 +1,42 @@
+'''Escrever a classe Círculo de acordo com o diagrama UML apresentado abaixo. A classe deve ter um atributo raio
+para armazenar a dimensão da figura e métodos para calcular sua área e sua circunferência, além dos métodos de
+acesso para definir e recuperar o atributo raio.
+Escrever um programa para testar a classe.'''
+import math
+class Circulo():
+    def __init__(self) -> None:
+        self.__r = 0
+    def set_r(self, v):
+        if v >= 0:
+            self.__r = v
+    def get_r(self):
+        return self.__r
+    def calc_area(self):
+        return self.__r ** 2 * math.pi
+    def calc_circunferencia(self):
+        return 2 * math.pi * self.__r 
+class UI:
+    @staticmethod
+    def main():
+        x = Circulo()
+        while UI.menu() != 99:
+          if UI.menu() == 1:
+              i = float(input('Digite o valor do raio: '))
+              x.set_r(i)
+          if UI.menu() == 2:
+              print(f'Raio = {x.get_r()}')
+          if UI.menu() == 3:
+              print(f'Area: {x.calc_area()}')
+          if UI.menu() == 4:
+              print(f'Circunferencia: {x.calc_circunferencia()}')
+        print('Bye Bye')
+    def menu():
+        print('----------MENU----------')
+        print('[1] para setar o valor do raio')
+        print('[2] para exibir o valor do raio')
+        print('[3] para calcular a area')
+        print('[4] para calcular a circunferencia')
+        print('[99] para sair')
+        n = int(input())
+        return n
+UI.main()
