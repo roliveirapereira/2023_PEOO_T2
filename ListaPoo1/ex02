@@ -1,0 +1,22 @@
+'''A classe deve ter atributos para armazenar o nome da disciplina e as notas dos quatros bimestres e da prova final.
+Os métodos da classe devem permitir calcular a média parcial (com as notas bimestrais) e a média final (com todas
+as notas, caso o aluno tenha ficado em prova final). Considere como média de aprovação o valor 60, notas de 0 a
+100, média parcial ponderada com pesos 2, 2, 3 e 3 e média final como a média aritmética da média parcial com a
+nota da prova final, caso o aluno não seja aprovado por média.
+Escrever um programa para testar a classe.'''
+class Disciplina:
+    def __init__(self, nome, n1, n2, n3, n4, nf):
+        self.nome = nome
+        self.n1 = n1
+        self.n2 = n2
+        self.n3 = n3
+        self.n4 = n4
+        self.nf = nf
+        self.media = ''
+    def calc_media(self):
+        self.media = (self.n1 * 2 + self.n2 * 2 + self.n3 * 3 + self.n4 * 3) /10 
+        if self.media < 60:
+            self.media = (self.media + self.nf) / 2
+        return self.media
+poo = Disciplina('POO', 30, 50, 30, 50, 80)
+print(poo.calc_media())
