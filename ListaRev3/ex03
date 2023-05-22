@@ -1,0 +1,6 @@
+def Diagonal(a, b):
+    diagonal = ((a ** 2) + (b ** 2)) * 0.5
+    return diagonal
+a = int(input())
+b = int(input())
+print(f'Diagonal = {Diagonal(a, b)}')
